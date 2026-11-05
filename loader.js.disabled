@@ -1,0 +1,5 @@
+"use strict";
+
+// CPI preload. The Launcher renames this file to loader.js when the mod is enabled and passes
+// it to Node with --require. See README.md.
+require("./lib/install").installFromPreferences({ Module: require("module") });

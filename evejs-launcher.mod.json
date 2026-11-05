@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 3,
+  "id": "evejs-cpi",
+  "displayName": "CPI: Planetary Infrastructure Capacity",
+  "version": "1.0.0",
+  "description": "Scales Planetary Industry infrastructure: command center CPU and powergrid, link bandwidth, and the storage of launch pads, storage facilities and command centers. The server and the client both apply the multiplier, so the colony screen shows and checks the same numbers the server enforces.",
+  "kind": "loader",
+  "supportedBackends": ["native"],
+  "activation": {"strategy": "loader_rename"},
+  "restart": "game_server",
+  "settings": {
+    "schemaVersion": 1,
+    "files": [
+      {"id": "prefs", "base": "mod", "path": "preferences.json", "format": "json"}
+    ],
+    "fields": [
+      {
+        "id": "planetaryInfrastructureCapacityMultiplier",
+        "label": "Planetary infrastructure capacity multiplier",
+        "description": "Multiplies command center CPU and powergrid at every upgrade level, link bandwidth, and the storage of launch pads, storage facilities and command centers. 1 = retail, 2 = double, 0.5 = half. Upgrade costs and what each structure uses stay retail. Restart the server; players see the new value at their next login.",
+        "type": "number",
+        "default": 1,
+        "minimum": 0.01,
+        "maximum": 1000,
+        "step": 0.1,
+        "restart": "game_server",
+        "file": "prefs",
+        "key": ["planetaryInfrastructureCapacityMultiplier"]
+      }
+    ]
+  }
+}
