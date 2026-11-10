@@ -2,12 +2,20 @@
   "schemaVersion": 3,
   "id": "evejs-cpi",
   "displayName": "CPI: Configurable Planetary Infrastructure",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Scales Planetary Industry infrastructure and factory cycle times: command center CPU and powergrid, link bandwidth, the storage of launch pads, storage facilities and command centers, and the cycle time of P1, P2, P3 and P4 schematics. The server and the client both apply each setting, so the colony screen shows and checks the same numbers the server enforces.",
   "kind": "loader",
   "supportedBackends": ["native"],
   "activation": {"strategy": "loader_rename"},
   "restart": "game_server",
+  "updates": {
+    "provider": "github",
+    "repository": "Its-Zaq/EveJS-CPI",
+    "asset": "EveJS-CPI-{version}.zip",
+    "channel": "stable",
+    "tagPrefix": "v",
+    "preserveFiles": []
+  },
   "settings": {
     "schemaVersion": 1,
     "files": [

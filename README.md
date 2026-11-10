@@ -40,8 +40,10 @@ settings on both sides, so the planet screen shows and checks what the server en
 
 ## Install
 
-1. Copy this folder into the EveJS installation's `mods` folder, or import it in the Launcher's
-   Mods page. It arrives disabled (`loader.js.disabled`).
+1. Download `EveJS-CPI-<version>.zip` from this repository's
+   [Releases](https://github.com/Its-Zaq/EveJS-CPI/releases) and import it in the Launcher's
+   Mods page, or copy its `evejs-cpi` folder into the EveJS installation's `mods` folder. It
+   arrives disabled (`loader.js.disabled`).
 2. **Configure** sets the multipliers. The Launcher saves them to `preferences.json` in this folder.
 3. Enable the mod and start the server with mods (Native Modded). Docker is not supported.
 4. Players log in again to pick up new values.
@@ -55,6 +57,14 @@ Changing a setting needs a server restart, and each player's next login brings t
 Disabling the mod and restarting returns the server to retail. A client still running from a
 CPI login returns to retail by itself at its next login, because the patch holds only for the
 handshake that delivered it.
+
+### Updates
+
+From 1.1.1 on, the Launcher's Mods page offers each new CPI release from this repository: **Check
+mod updates** shows it with its release notes, and nothing installs until you choose to. An
+update keeps `preferences.json`, so your settings carry over. CPI 1.1.0 and earlier don't say
+where their updates come from, so import 1.1.1 by hand once; the Launcher finds every later
+version itself.
 
 ### Updating from CPI 1.0
 
